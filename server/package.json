@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
   },
   "author": "GBG",
   "license": "ISC",
@@ -16,9 +17,10 @@
     "express": "^4.19.2",
     "graphql": "^16.9.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.4.4"
+    "mongoose": "^8.4.4",
+    "stripe": "^16.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }  
+  }
 }
