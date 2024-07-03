@@ -118,6 +118,18 @@ const resolvers = {
             }
         },
 
+        addComment: async(_, args) => {
+            const comment = await Comment.create(args);
+            return comment;
+        },
+        removeComment: async(_, { id }) => {
+            try {
+                return await Comment.findByIdAndDelete(id);
+            } catch { 
+                throw console.error("No Comment Found");
+            }
+        },
+
         addProduct: async(_, args) => {
             const product = await Product.create(args);
             return product;
@@ -129,10 +141,24 @@ const resolvers = {
                 throw console.error("No Product Found");
             }
         },
+        removeProduct: async(_, { id }) => {
+            try {
+                return await Product.findByIdAndDelete(id);
+            } catch {
+                throw console.error("No Product Found");
+            }
+        },
         
         addDonation: async(_, args) => {
             const donation = await Donation.create(args);
             return donation;
+        },
+        removeDonation: async(_, { id }) => {
+            try {
+                return await Donation.findByIdAndDelete(id);
+            } catch {
+                throw console.error("No Donation Found");
+            }
         },
 
         addOrder: async(_, { products }) => {

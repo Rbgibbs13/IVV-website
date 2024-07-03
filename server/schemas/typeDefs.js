@@ -9,6 +9,17 @@ const typeDefs = `
         orders: [Order]
     }
 
+    type Category {
+        _id: ID
+        name: String
+    }
+
+    type Comment {
+        _id: ID!
+        userID: User
+        comment: String
+    }
+
     type Product {
         _id: ID!
         name: String!
@@ -21,7 +32,7 @@ const typeDefs = `
 
     type Donation {
         _id: ID!
-        amount: Number!
+        amount: Float!
         purchaseDate: String
         description: String
     }
@@ -31,6 +42,7 @@ const typeDefs = `
         text: String
         published: Boolean
         createdAt: String
+        userID: User
         comments: [Comment]
     }
 
@@ -75,6 +87,9 @@ const typeDefs = `
         post(_id: ID!): Post
         posts: [Post]
 
+        comment(_id: ID!): Comment
+        comments: [Comment]
+
         order(_id: ID!): Order
         me: User
 
@@ -84,15 +99,24 @@ const typeDefs = `
     type Mutation {
         addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!): Auth
         updateUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!): User
+        removeUser(_id: ID!): User
 
-        addPost(text: String!, published: Boolean, createdAt: String): Post
+        addPost(text: String!, userID: Int , published: Boolean, createdAt: String): Post
         removePost(_id: ID!): Post
+
+        addComment(userID: Int!, comment: String!): Comment
+        removeComment(_id: ID!): Comment
 
         addProduct(name: String!, description: String, image: String, price: Float!, quantity: Int!): Product
         updateProduct(_id: ID!, description: String, image: String, price: Float!, quantity: Int!): Product
         removeProduct(_id: ID!): Product
 
         addDonation(amount: Float!, purchaseDate: String, description: String): Donation
+        removeDonation(_id: ID!): Donation
+
+        addOrder(products: [ProductInput]): Order
+        updateOrder(products: [ProductInput]): Order
+        removeOrder(_id: ID!): Order
 
         login(email: String!, password: String!): Auth
     }

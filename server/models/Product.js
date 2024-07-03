@@ -9,7 +9,7 @@ const productSchema = new Schema({
     },
     description: {
         type: String,
-        maxlength: 150,
+        maxlength: 250,
     },
     image: {
         type: String,
