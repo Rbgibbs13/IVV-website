@@ -8,7 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
 
-import { BlogProvider } from './utils/GlobalState';
+import { StateProvider } from './utils/GlobalState';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -38,13 +38,13 @@ const client = new ApolloClient({
 function App() {
     return (
         <ApolloProvider client={client}>
-            <BlogProvider>
+            <StateProvider>
                 <Header />
                     <div className="container flex-column justify-flex-start min-100-vh">
                         <Outlet />
                     </div>
                 <Footer />
-            </BlogProvider> 
+            </StateProvider> 
         </ApolloProvider>
     );
 }
