@@ -4,14 +4,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
 
 import App from './App.jsx';
-import About from './pages/About.jsx';
-import Checkout from './pages/Checkout.jsx';
-import Donors from './pages/Donors.jsx';
+import About from './pages/About';
+import Checkout from './pages/Checkout';
+import Donors from './pages/Donors';
 import Error from './pages/Error';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Order from './pages/Order.jsx';
-import Profile from './pages/Profile.jsx';
+import Order from './pages/Order';
+import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 
 // import Success from './pages/Success.jsx';
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
+            },
+            {
+                path: '/home',
+                element: <Home/>
             },
             {
                 path: '/login',
