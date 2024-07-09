@@ -1,0 +1,33 @@
+.header-parent {
+    border-bottom: .1rem solid whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: auto;
+}
+
+.header {
+    background-color: var(--color-brown);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-title {
+    color: var(--color-cyan);
+    font-family: var(--font-salsa);
+    text-shadow: var(--text-shadow);
+    font-size: 250%;
+    margin: 1% 5%;
+}
+
+.main-header-menu {
+    height: 100%;
+    width: auto;
+    min-width: 35%;
+    margin: auto;
+}

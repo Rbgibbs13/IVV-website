@@ -8,13 +8,13 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
 
-import { StateProvider } from './utils/GlobalState';
+import { MyProvider } from './utils/GlobalState';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 import './App.css';
-import './components/global.css';
+// import './components/global.css';
 
 const httpLink = createHttpLink({
    uri: '/graphql',
@@ -35,18 +35,18 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
-function App() {
+function App () {
     return (
         <ApolloProvider client={client}>
-            <StateProvider>
+            <MyProvider>
                 <Header />
                     <div className="container flex-column justify-flex-start min-100-vh">
                         <Outlet />
                     </div>
                 <Footer />
-            </StateProvider> 
+            </MyProvider> 
         </ApolloProvider>
-    );
+    )
 }
 
 export default App;

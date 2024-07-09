@@ -1,0 +1,45 @@
+.navbar-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-family: var(--font-salsa);
+}
+
+.nav-element {
+    width: 25%;
+    text-shadow: var(--nav-shadow);
+}
+
+.nav-element a {
+    display: block;
+    color: whitesmoke;
+    font-size: 150%;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.navbar-section a:hover {
+    transition-duration: .8s;
+    color: var(--color-black);
+    text-shadow: .5rem .5rem(black);
+}
+
+.drop-menu {
+    background-color: var(--color-brown);
+    border: var(--box-border);
+    box-shadow: .2rem .2rem rgba(0, 0, 0, 0.15);
+    border-radius: 1em;
+    display: none;
+    /* flex-direction: column;
+    margin-left: -.5em;
+    position: absolute;
+    height: auto; */
+    width: 8em;
+}
+
+/* .nav-hover:hover div {
+    transition-duration: .8s;
+    display: block;
+} */

@@ -111,3 +111,12 @@ export const QUERY_CATEGORIES = gql`
         }
     }
 `;
+
+export const QUERY_DONATIONS = gql`
+    query getDonations {
+        donations {
+            amount
+            description
+        }
+    }
+`

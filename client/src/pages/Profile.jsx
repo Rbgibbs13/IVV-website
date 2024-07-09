@@ -2,7 +2,10 @@ import { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_SINGLE_USER, QUERY_ME, QUERY_ARTICLES } from '../utils/queries';
+import { QUERY_SINGLE_USER, 
+    QUERY_ME 
+    // QUERY_ARTICLES 
+} from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = () => {
