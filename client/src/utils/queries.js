@@ -65,10 +65,12 @@ export const QUERY_SINGLE_USER = gql`
 
 export const QUERY_POSTS = gql`
     query allPosts {
-        text
-        published
-        createdAt
-        comments
+        posts {
+            text
+            published
+            createdAt
+            comments
+        }
     }
 `;
 

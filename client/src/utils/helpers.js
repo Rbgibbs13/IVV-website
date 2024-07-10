@@ -7,7 +7,6 @@ export function pluralize(name, count) {
 };
 
 export function currencyFormat(value) {
-    console.log(value.type);
     if(value.length == 6 ) {
         return value.substring(0, 3) + ',' + value.substring(2);
     } else if(value.length == 5) {

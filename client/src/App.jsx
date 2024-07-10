@@ -14,7 +14,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import './App.css';
-// import './components/global.css';
+import './output.css';
 
 const httpLink = createHttpLink({
    uri: '/graphql',

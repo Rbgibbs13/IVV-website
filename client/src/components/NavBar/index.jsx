@@ -69,13 +69,9 @@ export default function Nav() {
                       </div>
                     </div>
         
-                    <div className="nav-element nav-hover" >
+                    {/* <div className="nav-element nav-hover" >
                       <Link to="/checkout">🛒</Link>
-                      {/* <div id="drop-cart" className="drop-menu">
-                        <Link to="/order">Order History</Link>
-                        <Link to="/cart">Check Out</Link>
-                      </div> */}
-                    </div>
+                    </div> */}
                   </section>
                 </nav>
               );

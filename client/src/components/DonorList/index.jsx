@@ -25,7 +25,13 @@ const DonorList = () => {
     }
 
     return (
-        <div className='donor-parent'>
+        <div className='columns-3 md:container md:mx-auto donor-parent'>
+            <button className='donate-btn'>
+                <div id='dummy'></div>
+                <div id='element'>
+                    <h3 className='donate-btn-title'>Donate!</h3>
+                </div>
+            </button>
             {data.donations.length ? (
                 <div className='donor-div'>
                     <h1 className='donor-title'>Our Donors</h1>
