@@ -6,6 +6,19 @@ export function pluralize(name, count) {
     return name + 's';
 };
 
+export function currencyFormat(value) {
+    console.log(value.type);
+    if(value.length == 6 ) {
+        return value.substring(0, 3) + ',' + value.substring(2);
+    } else if(value.length == 5) {
+        return value.substring(0, 2) + ',' + value.substring(2);
+    } else if(value.length == 4) {
+        return value.substring(0, 1) + ',' + value.substring(1);
+    } else {
+        return value;
+    }
+};
+
 export function idbPromise(storeName, method, object) {
     return new Promise((resolve, reject) => {
         const request = qindow.indexedDB.open('shop-shop', 1);

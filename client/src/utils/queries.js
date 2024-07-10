@@ -29,6 +29,16 @@ export const QUERY_SINGLE_PRODUCT = gql`
     }
 `;
 
+export const QUERY_DONATIONS = gql`
+    query getDonations {
+        donations {
+            amount
+            purchaseDate
+            description
+        }
+    }
+`;
+
 export const QUERY_USERS = gql`
     query allUsers {
         users {
@@ -111,12 +121,3 @@ export const QUERY_CATEGORIES = gql`
         }
     }
 `;
-
-export const QUERY_DONATIONS = gql`
-    query getDonations {
-        donations {
-            amount
-            description
-        }
-    }
-`

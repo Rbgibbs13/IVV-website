@@ -36,9 +36,9 @@ export default function Nav() {
                           <Link id="profile-nav" to="/donors">Donors</Link>
                         </div>
 
-                        <div className="nav-element nav-hover" style={linkStyle}>
+                        {/* <div className="nav-element nav-hover" style={linkStyle}>
                           <Link to="/cart">Cart</Link>
-                        </div>
+                        </div> */}
                     </section>
                 </nav>
             );

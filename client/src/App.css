@@ -7,13 +7,26 @@
   --font-protest: "Protest Revolution", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-oswald: "Oswald", sans-serif;
+
   --color-white: whitesmoke;
   --color-cyan: rgb(219, 255, 255);
   --color-pink: #FFB0DC;
   --color-purple: purple;
   --color-black: black;
   --color-brown: rgb(199, 187, 175);
-  --text-shadow: .1em .1em rgba(126, 126, 126, 0.33);
-  --nav-shadow: .2em .2em rgba(126, 126, 126, 0.33);
+
+  --color-orange: #ef7d00;
+  --color-green: #198A00;
+  --color-red: #EF0500;
+  --color-altred: #de2010;
+  --color-greygreen: #a5dcad;
+  
+  --text-shadow: .2em .2em rgba(196, 196, 196, 0.33);
+  --orange-shadow: .2em .2em #ef7b0029;
+  --nav-shadow: .2em .2em rgba(193, 193, 193, 0.33);
+  --box-shadow: .33rem .33rem rgba(128, 128, 128, 0.33);
+  --invert-shadow: 0rem -.33rem rgba(128, 128, 128, 0.33);
+
   --box-border: .1em solid whitesmoke;
+  --dark-border: .1em solid black;
 }

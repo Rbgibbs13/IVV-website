@@ -1,0 +1,42 @@
+.donor-parent {
+    /* background-color: var(--color-black); */
+    display: flex;
+    color: var(--color-black);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: auto;
+    text-shadow: var(--text-shadow);
+}
+
+.donor-title {
+    color: var(--color-orange);
+    font-family: var(--font-salsa);
+    font-size: 300%;
+    text-shadow: var(--orange-shadow);
+    text-align: center;
+    margin: .5rem;
+}
+
+.donor-div {
+    width: 80%;
+    margin: auto;
+}
+
+.donor-block {
+    background-color: var(--color-greygreen);
+    border: var(--dark-border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    margin: 1% auto 1% auto;
+    width: 50%;
+}
+
+.donor-block h1 {
+    color: var(--color-orange);
+    text-shadow: var(--orange-shadow);
+}
+
+.donor-rule {
+    color: var(--color-orange);
+    width: 80%;
+}

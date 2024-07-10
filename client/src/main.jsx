@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Order from './pages/Order';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import Shop from './pages/Shop';
 // import Success from './pages/Success.jsx';
 // import Cart from './components/Cart/index.jsx';
 
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup/>
+            },
+            {
+                path: '/shop',
+                element: <Shop />
             },
         ],
     },

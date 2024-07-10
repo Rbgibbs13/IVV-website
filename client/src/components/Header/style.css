@@ -1,4 +1,5 @@
 .header-parent {
+    background-color: var(--color-green);
     border-bottom: .1rem solid whitesmoke;
     display: flex;
     flex-direction: row;
@@ -8,7 +9,7 @@
 }
 
 .header {
-    background-color: var(--color-brown);
+    background-color: var(--color-green);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,7 +19,7 @@
 }
 
 .header-title {
-    color: var(--color-cyan);
+    color: var(--color-orange);
     font-family: var(--font-salsa);
     text-shadow: var(--text-shadow);
     font-size: 250%;
