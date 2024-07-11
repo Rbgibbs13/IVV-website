@@ -24,7 +24,7 @@ const Gallery = () => {
     ];
 
     return (
-        <div className='img-gallery bg-blue-500'>
+        <div className='img-gallery'>
             <ImageGallery items={images} autoPlay='true' showBullets='true' showIndex='true' slideInterval={5000}/>
         </div>
     )

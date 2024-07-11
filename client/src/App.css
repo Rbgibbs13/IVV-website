@@ -49,3 +49,26 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.splash-div {
+  margin: 1% 10vw;
+  width: 80vw;
+}
+
+.before-image {
+  box-shadow: var(--box-shadow);
+  float: left;
+  margin: 1vw;
+  height: auto;
+  width: 20vw;
+}
+
+.splash-title {
+  font-size: max(1vw, 20px);
+}
+
+.wide-rule {
+  border-color: var(--color-orange);
+  margin: 1vw 10vw;
+  width: 80vw;
+}
