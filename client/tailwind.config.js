@@ -7,7 +7,12 @@ export default {
     './src/components/**/*.{html,jsx}'
 ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        '2xl': '1536px',
+        '3xl': '1800px',
+      }
+    },
   },
   plugins: [],
 }

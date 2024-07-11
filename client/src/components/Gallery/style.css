@@ -1,0 +1,6 @@
+@import "react-image-gallery/styles/css/image-gallery.css";
+
+.img-gallery {
+    margin: auto;
+    width: calc(100vw - 100px);
+}

@@ -7,30 +7,6 @@
     text-shadow: var(--text-shadow);
 }
 
-.donate-btn {
-    display: inline-block;
-    position: fixed;
-    background-color: var(--color-greygreen);
-    box-shadow: var(--box-shadow);
-    border-radius: 25%;
-    bottom: 2%;
-    right: 2%;
-    height: auto;
-    min-width: 100px;
-    width: 5%;
-    overflow: hidden;
-}
-
-.donate-btn:hover {
-    transition-duration: .6s;
-    background-color: var(--color-orange);
-}
-
-.donate-btn:hover .donate-btn-title {
-    transition-duration: .6s;
-    color: white;
-}
-
 #dummy {
     margin-top: 75%;
 }

@@ -1,7 +1,8 @@
 import { useQuery } from '@apollo/client';
 import { QUERY_DONATIONS, QUERY_USERS } from '../../utils/queries';
-import Donor from '../Donor';
 import { currencyFormat } from '../../utils/helpers';
+import Donor from '../Donor';
+import DonorForm from '../DonorForm';
 import './style.css';
 
 const DonorList = () => {
@@ -25,13 +26,8 @@ const DonorList = () => {
     }
 
     return (
-        <div className='columns-3 md:container md:mx-auto donor-parent'>
-            <button className='donate-btn'>
-                <div id='dummy'></div>
-                <div id='element'>
-                    <h3 className='donate-btn-title'>Donate!</h3>
-                </div>
-            </button>
+        <div className='donor-parent'>
+            <DonorForm/>
             {data.donations.length ? (
                 <div className='donor-div'>
                     <h1 className='donor-title'>Our Donors</h1>

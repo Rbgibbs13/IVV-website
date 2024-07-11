@@ -2,6 +2,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+/* @import "~react-image-gallery/styles/css/image-gallery.css"; */
 
 :root {
   --font-salsa: "Salsa", cursive;
@@ -13,10 +14,8 @@
   --font-oswald: "Oswald", sans-serif;
 
   --color-white: whitesmoke;
-  --color-cyan: rgb(219, 255, 255);
-  --color-pink: #FFB0DC;
-  --color-purple: purple;
   --color-black: black;
+  --color-grey: grey;
   --color-brown: rgb(199, 187, 175);
 
   --color-orange: #ef7d00;
@@ -36,7 +35,7 @@
 }
 
 body {
-  background-color: var(--color-brown);
+  background-color: var(--color-greygreen);
   margin: 0;
   display: flex;
   place-items: center;

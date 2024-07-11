@@ -2,6 +2,8 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import './style.css';
 
+import flag from '../../assets/zambia-flag.jpg';
+
 export default function Nav() {
     // const linkStyle = { border: '1px black', padding: '5px' };
     function showNavigation() {
@@ -39,6 +41,7 @@ export default function Nav() {
                         {/* <div className="nav-element nav-hover" style={linkStyle}>
                           <Link to="/cart">Cart</Link>
                         </div> */}
+                        
                     </section>
                 </nav>
             );
@@ -71,6 +74,10 @@ export default function Nav() {
         
                     {/* <div className="nav-element nav-hover" >
                       <Link to="/checkout">🛒</Link>
+                    </div> */}
+
+                    {/* <div className="nav-element">
+                      <img src={flag}></img>
                     </div> */}
                   </section>
                 </nav>
