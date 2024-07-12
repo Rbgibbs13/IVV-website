@@ -32,9 +32,24 @@ export const QUERY_SINGLE_PRODUCT = gql`
 export const QUERY_DONATIONS = gql`
     query getDonations {
         donations {
+            _id
             amount
             purchaseDate
             description
+        }
+    }
+`;
+
+export const QUERY_POSTS = gql`
+    query getPosts {
+        posts {
+            _id
+            title
+            text
+            image
+            published
+            createdAt
+            comments
         }
     }
 `;
@@ -63,22 +78,12 @@ export const QUERY_SINGLE_USER = gql`
     }
 `;
 
-export const QUERY_POSTS = gql`
-    query allPosts {
-        posts {
-            text
-            published
-            createdAt
-            comments
-        }
-    }
-`;
-
 export const QUERY_SINGLE_POST = gql`
     query singlePost($postID: ID!) {
         post(postID: $postID) {
             _id
             text
+            image
             published
             createdAt
             comments

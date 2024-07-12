@@ -2,10 +2,19 @@ const { Schema, model } = require('mongoose');
 const commentSchema = require('./Comment');
 
 const postSchema = new Schema({
+    title: {
+        type: String,
+        maxlength: 20,
+        required: true,
+    },
     text: {
         type: String,
         minlength: 5,
         maxlength: 250,
+        required: true,
+    },
+    image: {
+        type: String,
     },
     published: {
         type: Boolean,

@@ -23,10 +23,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_POST = gql`
-    mutation addPost($text: String!, $published: Boolean, $createdAt: String) {
-        addPost(text: $text, published: $published, createdAt: $createdAt) {
+    mutation addPost($title: String!, $text: String!, $image: String, $published: Boolean, $createdAt: String) {
+        addPost(title: $title, text: $text, image: $image, published: $published, createdAt: $createdAt) {
             _id
+            title
             text
+            image
             published
             createdAt
         }
@@ -44,6 +46,16 @@ export const ADD_COMMENT = gql`
         }
     }
 `;
+
+export const ADD_DONATION = gql`
+    mutation addDonation($amount: Number!, $description: String) {
+        addDonation(amount: $amount, description: $description) {
+            _id
+            amount
+            description
+        }
+    }
+`
 
 export const ADD_PRODUCT = gql`
     mutation addProduct($name: String!, $description: String, $image: String, $price: Float!, $quantity: Int!, $category: ID) {
@@ -64,7 +76,8 @@ export const ADD_PRODUCT = gql`
 export const ADD_ORDER = gql`
     mutation addOrder($products: [ID!]) {
         addOrder(products: $products) {
-            _id purchaseDate
+            _id
+            purchaseDate
             products {
                 name
                 description

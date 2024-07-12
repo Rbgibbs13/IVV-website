@@ -1,14 +1,13 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
+import { ADD_DONATION } from '../../utils/mutations';
 import './style.css';
 
 const DonorForm = (props) => {
     const [isToggled, setIsToggled] = useState(false);
-    const [ donorName, setName ] = useState();
-    const [ donorValue, setValue ] = useState();
-
-    console.log(donorName);
-    console.log(donorValue);
+    const [ donorName, setName ] = useState('');
+    const [ donorValue, setValue ] = useState(0.00);
+    const [ addDonation, { error, data } ] = useMutation(ADD_DONATION);
 
     const handleToggle = useCallback(() => {
         setIsToggled(!isToggled),
@@ -32,9 +31,23 @@ const DonorForm = (props) => {
         }
     };
 
-    const handleSubmitDonation = (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
-        console.log('donation submitted');
+        console.log(donorValue + " " + typeof donorValue);
+        console.log(donorName + " " + typeof donorName);
+
+        try {
+            const { data } = await addDonation({
+                variables: {
+                    amount: donorValue,
+                    description: donorName,
+                },
+            });
+
+            console.log(data);
+        } catch(error) {
+            console.error(error);
+        }
     };
 
     return (
@@ -48,13 +61,17 @@ const DonorForm = (props) => {
                 </button>
             ) : (
                 <div className='donate-form-parent'>
-                    <button onClick={handleToggle} className='close-btn'>V</button>
+                    <button onClick={handleToggle} className='close-btn'>X</button>
                     <form className='donate-form'>
-                        <label htmlFor='name' className='form-label'>Name/Initials:</label>
-                        <input type='text' id='name' placeholder='Anonymous' className='form-input' maxLength='20' onChange={e => handleChangeName(e.target.value)}></input>
-                        <label htmlFor='value' className='form-label'>Amount:</label>
-                        <input type='text' id='value' placeholder='100' className='form-input' maxLength='10' keyboardType="numeric" onChange={e => handleChangeValue(e.target.value)}></input>
-                        <input type='submit' value="Submit" onClick={handleSubmitDonation} className='form-submit'></input>
+                        <div className='form-element'>
+                            <label htmlFor='name' className='form-label'>Name: </label>
+                            <input type='text' id='name' placeholder='Anonymous' className='form-input' maxLength='20' onChange={e => handleChangeName(e.target.value)}></input>
+                        </div>
+                        <div className='form-element'>
+                            <label htmlFor='value' className='form-label'>Amount: $</label>
+                            <input type='number' id='value' placeholder='100' className='form-input' step={.01} maxLength='10' onChange={e => handleChangeValue(e.target.value)}></input>
+                        </div>
+                        <input type='submit' value="Submit" onClick={handleFormSubmit} className='form-submit'></input>
                     </form>
                 </div>
             )}

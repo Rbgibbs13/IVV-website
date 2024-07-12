@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_DONATIONS, QUERY_USERS } from '../../utils/queries';
 import { currencyFormat } from '../../utils/helpers';
@@ -32,15 +33,19 @@ const DonorList = () => {
                 <div className='donor-div'>
                     <h1 className='donor-title'>Our Donors</h1>
                     <hr className='donor-rule'></hr>
-                    {data.donations.map((donor) => (
-                        <div className='donor-block'>
-                            <h2>{donor.description}</h2>
-                            <hr className='donor-rule'></hr>
-                            <h1>${formatDonation(donor.amount)}</h1>
-                            <hr className='donor-rule'></hr>
-                            <h2>Thank You {donor.description.split(' ')[0]}!</h2>
-                        </div>
-                    ))}
+                    <ul>
+                        {data.donations.map((donor) => (
+                            <div key={donor._id} className='donor-block'>
+                                <li>
+                                    <h2>{donor.description}</h2>
+                                    <hr className='donor-rule'></hr>
+                                    <h1>${formatDonation(donor.amount)}</h1>
+                                    <hr className='donor-rule'></hr>
+                                    <h2>Thank You {donor.description.split(' ')[0]}!</h2>
+                                </li>
+                            </div>
+                        ))}
+                    </ul>
                     <hr className='donor-rule'></hr>
                 </div>
             ) : (

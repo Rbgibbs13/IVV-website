@@ -39,10 +39,11 @@ const typeDefs = `
 
     type Post {
         _id: ID!
-        text: String
+        title: String!
+        text: String!
+        image: String
         published: Boolean
         createdAt: String
-        userID: User
         comments: [Comment]
     }
 
@@ -101,7 +102,7 @@ const typeDefs = `
         updateUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!): User
         removeUser(_id: ID!): User
 
-        addPost(text: String!, userID: Int , published: Boolean, createdAt: String): Post
+        addPost(title: String!, text: String!, image: String, published: Boolean, createdAt: String): Post
         removePost(_id: ID!): Post
 
         addComment(userID: Int!, comment: String!): Comment

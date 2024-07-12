@@ -4,6 +4,7 @@ import './style.css';
 
 const PostList = () => {
     const { loading, error, data } = useQuery(QUERY_POSTS);
+    // if(data) console.log('-----------' + data);
 
     if(loading) {
         return (
@@ -12,16 +13,27 @@ const PostList = () => {
     }
 
     if(error) {
+        console.error(error);
         return (
-            <div className='error'>{error}</div>
+            <div className='error'>Error</div>
         )
     }
 
     return (
-        <div className=''>
+        <div className='post-parent'>
             {data.posts.length ? (
                 <div>
-                    <h2>Posts Here</h2>
+                    <ul>
+                        {data.posts.map((post) => {
+                            if(post.published) {
+                                <li className='post-element'>
+                                    <h2>{post.title}</h2>
+                                    <img src={post.image}></img>
+                                    <p>{post.text}</p>
+                                </li>
+                            }
+                        })}
+                    </ul>
                 </div>
             ) : (
                 <div>
