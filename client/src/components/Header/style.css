@@ -1,11 +1,14 @@
 .header-parent {
     background-color: var(--color-green);
-    border-bottom: .1rem solid whitesmoke;
+    border-bottom: .1rem solid var(--color-greygreen);
     display: flex;
+    position: sticky;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     height: auto;
+    top: 0;
+    z-index: 2;
 }
 
 .header {

@@ -25,13 +25,11 @@ const PostList = () => {
                 <div>
                     <ul>
                         {data.posts.map((post) => {
-                            if(post.published) {
-                                <li className='post-element'>
-                                    <h2>{post.title}</h2>
-                                    <img src={post.image}></img>
-                                    <p>{post.text}</p>
-                                </li>
-                            }
+                            <li className='post-element'>
+                                <h2>{post.title}</h2>
+                                <img src={post.image}></img>
+                                <p>{post.text}</p>
+                            </li>
                         })}
                     </ul>
                 </div>

@@ -4,13 +4,13 @@ import { ADD_DONATION } from '../../utils/mutations';
 import './style.css';
 
 const DonorForm = (props) => {
-    const [isToggled, setIsToggled] = useState(false);
+    const [ isToggled, setIsToggled ] = useState(false);
     const [ donorName, setName ] = useState('');
     const [ donorValue, setValue ] = useState(0.00);
     const [ addDonation, { error, data } ] = useMutation(ADD_DONATION);
 
     const handleToggle = useCallback(() => {
-        setIsToggled(!isToggled),
+        setIsToggled(!isToggled);
         [isToggled, setIsToggled]
     });
 
@@ -22,9 +22,6 @@ const DonorForm = (props) => {
     };
 
     const handleChangeValue = (e) => {
-        // if(!isNaN(e)) {
-        //     setValue(e);
-        // }
         const re = /^[0-9\b]+$/;
         if(e === '' || re.test(e)) {
             setValue(e);
