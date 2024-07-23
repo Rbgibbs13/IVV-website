@@ -102,7 +102,8 @@ const typeDefs = `
         updateUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!): User
         removeUser(_id: ID!): User
 
-        addPost(title: String!, text: String!, image: String, published: Boolean, createdAt: String): Post
+        addPost(title: String!, text: String!, image: String!, published: Boolean, createdAt: String): Post
+        updatePost(title: String!, text: String!, image: String!, published: Boolean, createdAt: String): Post
         removePost(_id: ID!): Post
 
         addComment(userID: Int!, comment: String!): Comment

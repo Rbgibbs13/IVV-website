@@ -14,6 +14,8 @@ import Order from './pages/Order';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Shop from './pages/Shop';
+import Projects from './pages/Projects';
+import Members from './pages/Members';
 // import Success from './pages/Success.jsx';
 // import Cart from './components/Cart/index.jsx';
 
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
             {
                 path: '/donors',
                 element: <Donors/>
+            },
+            {
+                path: '/projects',
+                element: <Projects/>
+            },
+            {
+                path: '/members',
+                element: <Members/>
             },
             {
                 path: '/order',

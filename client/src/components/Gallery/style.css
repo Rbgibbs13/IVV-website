@@ -4,3 +4,19 @@
     margin: 1vh 10vw;
     width: 80vw;
 }
+
+.image-gallery {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.33), 20%, var(--color-greygreen), 80%, rgba(255, 255, 255, 0.33));
+}
+
+.image-gallery-image {
+    margin-top: .5rem;
+}
+
+.image-gallery-thumbnails-wrapper {
+    width: 80%;
+    border-left: .2rem solid black;
+    border-right: .2rem solid black;
+    justify-content: center;
+    margin: 0 10%;
+}

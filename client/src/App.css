@@ -35,7 +35,8 @@
 }
 
 body {
-  background-color: var(--color-grey);
+  background-color: var(--color-white);
+  color: black;
   margin: 0;
   display: flex;
   place-items: center;
@@ -47,6 +48,12 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+/* HOME */
+
+.main-container {
+  min-height: 100vh;
 }
 
 .splash-div {
@@ -75,4 +82,18 @@ body {
   border-color: var(--color-orange);
   margin: 1vw 5vw;
   width: 90vw;
+}
+
+/* Mission/About */
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  margin: 1vw 0;
 }

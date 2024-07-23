@@ -1,8 +1,10 @@
 // import { useNavigate } from "react-router-dom";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import Jumbotron from '../components/Jumbotron';
 import Gallery from '../components/Gallery';
 import DonorList from '../components/DonorList';
 import PostList from '../components/PostList';
+import Data from '../components/Data';
 
 import frenchWoman from '/images/test-images/french-woman-2.jpg';
 
@@ -16,6 +18,7 @@ const Home = () => {
 
     return (
         <div className="inline-flex flex-col flex-no-wrap items-center home-container parallax-group" >
+            <Jumbotron/>
             <hr className='wide-rule'></hr>
             <div className='splash-div'>
                 <img className='before-image' src={frenchWoman}>
@@ -25,22 +28,31 @@ const Home = () => {
                     Donec venenatis ipsum tortor, sed euismod neque elementum finibus. Sed iaculis ante nisl, a facilisis mi tincidunt quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ligula neque, fermentum sit amet porta non, dictum vel lorem. Praesent eu gravida tortor. Donec egestas, diam ac rutrum facilisis, odio neque hendrerit dolor, posuere sodales nibh erat nec turpis. Suspendisse dapibus diam purus, vel egestas dui vulputate condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas rhoncus lectus nec magna cursus, eu fermentum urna ornare. Maecenas hendrerit varius viverra. Duis non quam nulla. Duis tellus velit, mollis et lorem sed, cursus pharetra lectus. Mauris sapien sem, mattis quis lacus non, aliquam porttitor arcu.
                 </p>
             </div>
-            <hr className='wide-rule'></hr>
 
-            <Gallery/>
+            <hr className='wide-rule'></hr>
+            <div>
+                <h2 className='div-header'>Views From Africa</h2>
+                <Gallery/>
+            </div>
+                
+            <hr className='wide-rule'></hr>
+            
+            <div className='splash-div'>
+                <Data/>
+            </div>
             <hr className='wide-rule'></hr>
 
             <div className='splash-div'>
                 <h2 className="truncate div-header">
-                    Updates From Africa
+                    News From Africa
                 </h2>
                 <PostList />
             </div>
+
             <hr className='wide-rule'></hr>
             <div className='splash-div'>
                 <DonorList />
             </div>
-            
         </div>
     )
 }

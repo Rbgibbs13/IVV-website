@@ -1,0 +1,48 @@
+.jumbotron {
+    background-color: rgb(127, 127, 127);
+    /* background-image: url("https://picsum.photos/id/1018/1000/600/"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    height: 70vh;
+    min-height: 400px;
+    width: 100%;
+    margin-top: 0%;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.jumbo-title {
+    /* color: var(--color-orange); */
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    text-shadow: .1rem .1rem rgba(255, 255, 255, 0.33);
+}
+
+.title-main {
+    font-size: 200%;
+}
+
+.title-alt {
+    color: white;
+    font-size: 125%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        top: 60%;
+    }
+    to {
+        opacity: 1;
+        top: 40%;
+    }
+}
+
+/* .fade-in {
+    animation: fadeIn 1.5s ease-out;
+} */

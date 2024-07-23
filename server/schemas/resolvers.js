@@ -110,9 +110,17 @@ const resolvers = {
             const post = await Post.create(args);
             return post;
         },
-        removePost: async(_, { id }) => {
+        removePost: async(_, { _id }) => {
+            console.log(_id);
             try {
-                return await Post.findByIdAndDelete(id);
+                return await Post.findByIdAndDelete(_id);
+            } catch {
+                throw console.error("No Post Found");
+            }
+        },
+        updatePost: async(_, args) => {
+            try {
+                return await Post.findByIdAndUpdate(_id, { $inc: { title: args.title, text: args.text, image: args.image, published: args.published}}, { new: true});
             } catch {
                 throw console.error("No Post Found");
             }

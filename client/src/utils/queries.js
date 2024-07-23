@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_PRODUCTS = gql`
-    query allProducts {
-        products {
+    query getProducts {
+        product {
             _id
             name
             description
@@ -18,7 +18,7 @@ export const QUERY_PRODUCTS = gql`
 
 export const QUERY_SINGLE_PRODUCT = gql`
     query singleProduct($productID: ID!) {
-        products(productID: $productID) {
+        product(productID: $productID) {
             name
             description
             image
@@ -36,6 +36,19 @@ export const QUERY_DONATIONS = gql`
             amount
             purchaseDate
             description
+        }
+    }
+`;
+
+export const QUERY_SINGLE_POST = gql`
+    query getPost($postID: ID!) {
+        post(postID: $postID) {
+            _id
+            text
+            image
+            published
+            createdAt
+            comments
         }
     }
 `;
@@ -74,19 +87,6 @@ export const QUERY_SINGLE_USER = gql`
             lastName
             userName
             email
-        }
-    }
-`;
-
-export const QUERY_SINGLE_POST = gql`
-    query singlePost($postID: ID!) {
-        post(postID: $postID) {
-            _id
-            text
-            image
-            published
-            createdAt
-            comments
         }
     }
 `;

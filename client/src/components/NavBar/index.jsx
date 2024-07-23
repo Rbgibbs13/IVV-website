@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './style.css';
 
 import flag from '../../assets/zambia-flag.jpg';
+// 🛍️
 
 export default function Nav() {
     // const linkStyle = { border: '1px black', padding: '5px' };
@@ -12,14 +13,7 @@ export default function Nav() {
                 <nav className="main-header-menu">
                     <section className="navbar-section">
                         <div className="nav-element" style={linkStyle}>
-                        <Link to="/">Home</Link>
-                        </div>
-
-                        <div className="nav-element nav-hover" style={linkStyle}>
-                          <Link to="/" onClick={() => Auth.logout()}>Logout</Link>
-                          <div id="drop-signup" className="drop-menu" style={linkStyle}>
-                              <Link to="/signup">Sign-Up</Link>
-                          </div>
+                          <Link to="/">Home</Link>
                         </div>
                         
                         <div className="nav-element" style={linkStyle}>
@@ -29,13 +23,25 @@ export default function Nav() {
                         <div className="nav-element" style={linkStyle}>
                           <Link id="profile-nav" to="/about">Mission</Link>
                         </div>
+
+                        <div className="nav-element">
+                          <Link to='/members'>Members</Link>
+                        </div>
+
+                        <div className="nav-element" style={linkStyle}>
+                          <Link id="profile-nav" to="/donors">Donors</Link>
+                        </div>
+
+                        <div className="nav-element">
+                          <Link to='/projects'>Projects</Link>
+                        </div>
                         
                         <div className="nav-element" style={linkStyle}>
                           <Link to="/shop">Shop</Link>
                         </div>
 
-                        <div className="nav-element" style={linkStyle}>
-                          <Link id="profile-nav" to="/donors">Donors</Link>
+                        <div className="nav-element nav-hover" style={linkStyle}>
+                          <Link to="/" onClick={() => Auth.logout()}>Logout</Link>
                         </div>
 
                         {/* <div className="nav-element nav-hover" style={linkStyle}>
@@ -54,22 +60,30 @@ export default function Nav() {
                     </div>
 
                     <div className="nav-element" >
-                          <Link id="profile-nav" to="/about">Mission</Link>
+                      <Link id="profile-nav" to="/about">Mission</Link>
+                    </div>
+
+                    <div className="nav-element">
+                      <Link to='/members'>Members</Link>
                     </div>
         
                     <div className="nav-element" >
-                        <Link id="profile-nav" to="/donors">Donors</Link>
+                      <Link to="/donors">Donors</Link>
+                    </div>
+
+                    <div className="nav-element">
+                      <Link to='/projects'>Projects</Link>
                     </div>
                     
                     <div className="nav-element" >
-                      <Link to="/shop">Shop<span role="img" aria-label="shopping bag"> 🛍️</span></Link>
+                      <Link to="/shop">Shop<span role="img" aria-label="shopping bag"> </span></Link>
                     </div>
         
                     <div className="nav-element nav-hover" >
                       <Link to="/login">Login</Link>
-                      <div id="drop-signup" className="drop-menu" >
+                      {/* <div id="drop-signup" className="drop-menu" >
                         <Link to="/signup">Sign-Up</Link>
-                      </div>
+                      </div> */}
                     </div>
         
                     {/* <div className="nav-element nav-hover" >
