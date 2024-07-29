@@ -8,7 +8,7 @@ const Data = () => {
                 <p className="data-text">Need eye-care and <span className='data-span'>10,000</span> more go blind annually.</p>
             </div>
             <div className="data-element">
-                <h2 className="data-title">700 Patients</h2>
+                <h2 className="data-title">~3500 Patients</h2>
                 <p className="data-text">Are treated every trip.</p>
             </div>
             <div className="data-element">

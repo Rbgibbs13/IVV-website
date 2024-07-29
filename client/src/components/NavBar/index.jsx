@@ -25,7 +25,7 @@ export default function Nav() {
                         </div>
 
                         <div className="nav-element">
-                          <Link to='/members'>Members</Link>
+                          <Link to='/members'>Leadership</Link>
                         </div>
 
                         <div className="nav-element" style={linkStyle}>
@@ -64,7 +64,7 @@ export default function Nav() {
                     </div>
 
                     <div className="nav-element">
-                      <Link to='/members'>Members</Link>
+                      <Link to='/members'>Leadership</Link>
                     </div>
         
                     <div className="nav-element" >

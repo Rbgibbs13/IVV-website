@@ -4,7 +4,8 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90%;
+    margin: 5%;
 }
 
 .data-element {

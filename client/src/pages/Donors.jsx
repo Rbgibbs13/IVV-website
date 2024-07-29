@@ -2,11 +2,9 @@ import DonorList from "../components/DonorList";
 
 const Donors = () => {
     return (
-        <main className="donor-main">
-            <div className="donor-parent">
-                <DonorList/>
-            </div>
-        </main>
+        <div className="donor-main">
+            <DonorList/>
+        </div>
     )
 }
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_DONATIONS, QUERY_USERS } from '../../utils/queries';
-import { currencyFormat } from '../../utils/helpers';
+import { currencyFormat, formatDate } from '../../utils/helpers';
 import Donor from '../Donor';
 import DonorForm from '../DonorForm';
 import './style.css';
@@ -9,7 +9,7 @@ import './style.css';
 const DonorList = () => {
     const { loading, error, data } = useQuery(QUERY_DONATIONS);
 
-    function formatDonation (input) {
+    const formatDonation = (input) => {
         let convert = input.toString();
         return currencyFormat(convert);
     }
@@ -31,13 +31,13 @@ const DonorList = () => {
             <DonorForm/>
             {data.donations.length ? (
                 <div className='donor-div'>
-                    <h1 className='donor-title'>Our Donors</h1>
+                    <h1 className='div-header'>Our Donors</h1>
                     <hr className='donor-rule'></hr>
-                    <ul>
+                    <ul className='donor-list-parent'>
                         {data.donations.map((donor) => (
                             <div key={donor._id} className='donor-block'>
                                 <li>
-                                    <h2>{donor.description}</h2>
+                                    <h2>{donor.description} <span>||</span> {formatDate(donor.purchaseDate)}</h2>
                                     <hr className='donor-rule'></hr>
                                     <h1>${formatDonation(donor.amount)}</h1>
                                     <hr className='donor-rule'></hr>
@@ -46,7 +46,6 @@ const DonorList = () => {
                             </div>
                         ))}
                     </ul>
-                    <hr className='donor-rule'></hr>
                 </div>
             ) : (
                 <div className='donor-div'>

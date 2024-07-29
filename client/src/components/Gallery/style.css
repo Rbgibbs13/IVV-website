@@ -9,14 +9,15 @@
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.33), 20%, var(--color-greygreen), 80%, rgba(255, 255, 255, 0.33));
 }
 
-.image-gallery-image {
-    margin-top: .5rem;
-}
-
 .image-gallery-thumbnails-wrapper {
     width: 80%;
-    border-left: .2rem solid black;
-    border-right: .2rem solid black;
+    align-items: center;
     justify-content: center;
     margin: 0 10%;
+}
+
+.image-gallery-thumbnails-container {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
 }

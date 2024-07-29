@@ -7,19 +7,6 @@
     text-shadow: var(--text-shadow);
 }
 
-#dummy {
-    margin-top: 75%;
-}
-
-#element {
-    position: absolute;
-    border-radius: 25%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
 .donate-btn-title {
     color: var(--color-orange);
     text-shadow: var(--orange-shadow);
@@ -27,18 +14,25 @@
     font-family: var(--font-salsa);
 }
 
-.donor-title {
-    color: var(--color-orange);
+/* .donor-title {
+    color: var(--color-black);
     font-family: var(--font-salsa);
     font-size: 300%;
     text-shadow: var(--orange-shadow);
     text-align: center;
     margin: .5rem;
-}
+} */
 
 .donor-div {
     width: 80%;
     margin: auto;
+}
+
+.donor-list-parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: auto;
 }
 
 .donor-block {
@@ -46,16 +40,32 @@
     border: var(--dark-border);
     box-shadow: var(--box-shadow);
     text-align: center;
-    margin: 1% auto 1% auto;
-    width: 50%;
+    margin: 1% 0 1% 4%;
+    width: 46%;
 }
 
 .donor-block h1 {
     color: var(--color-orange);
     text-shadow: var(--orange-shadow);
+    font-family: var(--font-salsa);
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.donor-block h2 {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 125%;
+}
+
+.donor-block span {
+    color: var(--color-orange);
+    font-size: 125%;
 }
 
 .donor-rule {
     color: var(--color-orange);
+    border: .1rem solid var(--color-orange);
     width: 80%;
+    margin: 1% 10%;
 }

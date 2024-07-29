@@ -1,8 +1,10 @@
 
+import Directors from "../components/Directors";
+
 const Members = () => {
     return (
-        <div>
-            Members
+        <div className="about-parent">
+            <Directors/>
         </div>
     )
 };

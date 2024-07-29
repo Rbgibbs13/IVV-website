@@ -1,0 +1,42 @@
+.directors-parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin: 0% 5%;
+}
+
+.section-title {
+    text-align: center;
+    padding-top: 5%;
+    width: 100%;
+}
+
+.directors-element {
+    /* border: .1rem solid orange; */
+    height: auto;
+    margin: 2% 5%;
+    width: 90%;
+}
+
+.director-image {
+    border-right: 1rem solid rgba(128, 128, 128, 0.33);
+    float: left;
+    width: 40%;
+    margin-right: 2%;
+}
+
+.director-title {
+    font-family: var(--font-poppins);
+    font-size: 150%;
+    font-weight: 600;
+    padding: 1%;
+}
+
+.director-text {
+    font-family: var(--font-poppins);
+    font-size: 90%;
+    font-weight: 300;
+    padding: 1%;
+}

@@ -74,26 +74,27 @@ body {
 }
 
 .div-header {
-  font-size: max(2vw, 40px);
+  color: var(--color-orange);
+  font-family: var(--font-salsa);
+  font-size: max(2.5vw, 36px);
   text-align: center;
+  text-shadow: var(--text-shadow);
 }
 
 .wide-rule {
   border-color: var(--color-orange);
   margin: 1vw 5vw;
-  width: 90vw;
+  width: 90%;
 }
 
 /* Mission/About */
 
-.about-main {
-  display: flex;
+.about-parent {
+  /* display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
-}
-
-.about {
-  margin: 1vw 0;
+  justify-content: center; */
+  margin: 4% 5%;
+  width: 90%;
 }

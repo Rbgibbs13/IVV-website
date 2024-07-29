@@ -5,6 +5,7 @@ import {
     createHttpLink,
 } from '@apollo/client';
 
+import { useEffect } from 'react';
 import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ import { MyProvider } from './utils/GlobalState';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/Scroll';
 
 import './App.css';
 import './output.css';
@@ -39,6 +41,7 @@ function App () {
     return (
         <ApolloProvider client={client}>
             <MyProvider>
+                <ScrollToTop/>
                 <Header />
                     <div className="main-container">
                         <Outlet />

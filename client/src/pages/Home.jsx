@@ -30,7 +30,7 @@ const Home = () => {
             </div>
 
             <hr className='wide-rule'></hr>
-            <div>
+            <div >
                 <h2 className='div-header'>Views From Africa</h2>
                 <Gallery/>
             </div>
@@ -43,15 +43,15 @@ const Home = () => {
             <hr className='wide-rule'></hr>
 
             <div className='splash-div'>
-                <h2 className="truncate div-header">
+                <h2 className="div-header">
                     News From Africa
                 </h2>
-                <PostList />
+                <PostList/>
             </div>
 
             <hr className='wide-rule'></hr>
             <div className='splash-div'>
-                <DonorList />
+                <DonorList/>
             </div>
         </div>
     )

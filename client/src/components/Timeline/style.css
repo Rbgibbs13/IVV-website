@@ -1,0 +1,99 @@
+.timeline-wrapper {
+    position: absolute;
+    float: left;
+    width: max(10%, 150px);
+    top: max(25%, 200px);
+    left: 0%;
+}
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 15%;
+    width: 90%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.timeline {
+    height: max(30vh, 200px);
+    width: 5px;
+    background-color: #e5e5e5;
+}
+
+/* .timeline-span {
+    color: var(--color-orange);
+} */
+
+.circleWrapper {
+    position: relative;
+}
+
+.circle {
+    width: max(3vw, 50px);
+    height: max(2vw, 30px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    background-color: var(--color-white);
+}
+
+#circle0 {
+    background-color: var(--color-orange);
+}
+
+.message {
+    position: absolute;
+    left: 100%;
+    top: 0%;
+    width: max(12vw, 150px);
+    font-size: max(1.1vw, 14px);
+    font-weight: 500;
+}
+
+.stub {
+    color: var(--color-orange);
+    font-family: var(--font-poppins);
+    font-size: max(1.5vw, 20px);
+    font-weight: 600;
+    width: 20vw;
+    min-height: 5vh;
+    text-shadow: var(--text-shadow);
+    margin-top: 20vh;
+    text-align: center;
+}
+
+/* HISTORY */
+
+.history-list {
+    margin: 2% 5%;
+}
+
+.list-element {
+    /* list-style: circle outside; */
+    font-size: max(1.25vw, 14px);
+    padding: 1%;
+    margin: 1% 5%;
+}
+
+.history-span {
+    color: var(--color-orange);
+}
+
+.odd {
+    background-color: var(--color-white);
+}
+
+.even {
+    background-color: var(--color-greygreen);
+}
